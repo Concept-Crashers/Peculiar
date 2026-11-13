@@ -5,7 +5,22 @@ import { PageHero } from '../components/ui/PageHero'
 import { Reveal } from '../components/ui/Reveal'
 import { SiteLayout } from '../components/layout/SiteLayout'
 import { Marquee } from '../components/ui/Marquee'
+import { ContentReadiness } from '../components/ui/ContentReadiness'
+import { PageContentSections } from '../components/ui/PageContentSections'
 import { pageContent } from '../data/pageContent'
+
+const pageImages: Record<string, string> = {
+  about: '/images/team-session.webp',
+  services: '/images/workshop.webp',
+  products: '/images/workspace.webp',
+  projects: '/images/collaborative-work.webp',
+  team: '/images/team-session.webp',
+  insights: '/images/workspace.webp',
+  careers: '/images/team-session.webp',
+  contact: '/images/workshop.webp',
+  privacy: '/images/workspace.webp',
+  terms: '/images/workspace.webp',
+}
 
 export function ContentIndexPage() {
   const { section } = useParams()
@@ -30,6 +45,7 @@ export function ContentIndexPage() {
         title={page.title}
         description={page.description}
         breadcrumb={page.label}
+        image={section ? pageImages[section] : undefined}
       />
       <Marquee items={['People first', 'Built with purpose', 'Made to matter']} label="People first. Built with purpose. Made to matter." />
       <section className="editorial-section section-pad">
@@ -50,6 +66,12 @@ export function ContentIndexPage() {
           </Reveal>
         </div>
       </section>
+      <PageContentSections label={page.label} blocks={page.blocks} />
+      <ContentReadiness
+        title="What we need before publishing"
+        description="Each part of this page will be completed with approved information, so visitors can rely on what they read."
+        items={page.needed}
+      />
       <section className="page-next-section">
         <div className="container-wide page-next-inner">
           <Reveal>

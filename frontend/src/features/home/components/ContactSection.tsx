@@ -9,11 +9,15 @@ export function ContactSection() {
       <Reveal className="container-wide">
         <div className="contact-panel">
           <div>
-            <p className="eyebrow eyebrow-light">Let&apos;s make a start</p>
-            <h2 id="contact-title">Have something in mind? Let&apos;s explore it.</h2>
+            <p className="eyebrow eyebrow-light">Contact information</p>
+            <h2 id="contact-title">The right way to reach us is being confirmed.</h2>
+            <p className="contact-panel-note">
+              Visit the contact page for its current status. We will publish
+              contact channels once they are approved.
+            </p>
           </div>
           <Link className="button-primary" to="/contact">
-            Contact Peculiar <FontAwesomeIcon icon={faArrowRight} aria-hidden="true" />
+            View contact page <FontAwesomeIcon icon={faArrowRight} aria-hidden="true" />
           </Link>
         </div>
       </Reveal>

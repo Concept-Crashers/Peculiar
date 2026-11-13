@@ -3,21 +3,21 @@ import { Reveal } from '../../../components/ui/Reveal'
 const steps = [
   {
     number: '01',
-    title: 'Listen & understand',
+    title: 'People & context',
     description:
-      'We start with your context, your goals and the people you want to reach.',
+      'Who is affected, what is happening now, and what needs to change?',
   },
   {
     number: '02',
-    title: 'Make a clear plan',
+    title: 'Purpose & outcomes',
     description:
-      'Together, we shape the challenge into an approach that feels useful and achievable.',
+      'What would a useful outcome look like, and how would you recognize it?',
   },
   {
     number: '03',
-    title: 'Create with care',
+    title: 'Constraints & fit',
     description:
-      'We bring the right people and technology together to move the idea forward.',
+      'What existing systems, resources or requirements should shape the solution?',
   },
 ]
 
@@ -26,11 +26,11 @@ export function ApproachSection() {
     <section className="approach-section section-pad" id="approach" aria-labelledby="approach-title">
       <div className="container-wide">
         <Reveal className="section-heading">
-          <p className="eyebrow eyebrow-light">Our approach</p>
-          <h2 id="approach-title">Thoughtful at every step.</h2>
+          <p className="eyebrow eyebrow-light">Before choosing a solution</p>
+          <h2 id="approach-title">Start with the questions that matter.</h2>
           <p>
-            No one-size-fits-all playbook. Just a clear, collaborative process
-            built around the outcome you need.
+            These are useful discovery questions, not a claim about a specific
+            Peculiar delivery process.
           </p>
         </Reveal>
         <div className="approach-grid">

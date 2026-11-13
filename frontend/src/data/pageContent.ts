@@ -7,6 +7,11 @@ export interface PageDefinition {
   intro: string
   status: string
   needed: string[]
+  blocks: {
+    title: string
+    description: string
+    items: string[]
+  }[]
 }
 
 export const pageContent: Record<string, PageDefinition> = {
@@ -21,6 +26,18 @@ export const pageContent: Record<string, PageDefinition> = {
       'This page is ready for the real story: what the company believes, who it serves, how it began and where it is going.',
     status: 'Company profile in preparation',
     needed: ['Approved company overview', 'Mission, vision and values', 'Founder or leadership biographies', 'Approved team photography'],
+    blocks: [
+      {
+        title: 'The company story',
+        description: 'A clear introduction should explain what Peculiar does and why it exists, using details approved by the company.',
+        items: ['Company background', 'Who the company serves', 'What it aims to make possible'],
+      },
+      {
+        title: 'People and principles',
+        description: 'The people and values behind the work belong here once names, roles and statements are confirmed.',
+        items: ['Leadership profiles', 'Mission and values', 'Approved team photography'],
+      },
+    ],
   },
   services: {
     label: 'Services',
@@ -33,6 +50,18 @@ export const pageContent: Record<string, PageDefinition> = {
       'Service names, descriptions and delivery details will be published here once the company confirms its current offerings.',
     status: 'Service catalogue in preparation',
     needed: ['Confirmed service list', 'Scope and deliverables per service', 'Typical engagement process', 'Approved service imagery'],
+    blocks: [
+      {
+        title: 'Service catalogue',
+        description: 'No service cards are presented as active offerings until the company confirms the list and descriptions.',
+        items: ['Confirmed service names', 'Intended audiences and needs', 'Availability and engagement route'],
+      },
+      {
+        title: 'What a service page will explain',
+        description: 'Each published service should help visitors understand what is included and whether it fits their need.',
+        items: ['Scope and deliverables', 'Process and responsibilities', 'Approved examples and FAQs'],
+      },
+    ],
   },
   products: {
     label: 'Products',
@@ -45,6 +74,18 @@ export const pageContent: Record<string, PageDefinition> = {
       'Product names, availability, features, screenshots and support details will be added when confirmed by the company.',
     status: 'Product catalogue in preparation',
     needed: ['Confirmed product names and availability', 'Feature lists and intended users', 'Approved screenshots or demos', 'Support and access information'],
+    blocks: [
+      {
+        title: 'Product catalogue',
+        description: 'Product listings will be added only after the product name, ownership and current availability are confirmed.',
+        items: ['Verified product name and purpose', 'Current availability', 'Approved product visuals'],
+      },
+      {
+        title: 'Useful product details',
+        description: 'Visitors should be able to understand who a product is for and where to go for access or help.',
+        items: ['Intended users and verified features', 'Demo, access or pricing route', 'Support information'],
+      },
+    ],
   },
   projects: {
     label: 'Projects',
@@ -57,6 +98,18 @@ export const pageContent: Record<string, PageDefinition> = {
       'No client names, project outcomes or metrics are published until they are verified and approved for public use.',
     status: 'Approved case studies will appear here',
     needed: ['Client and publication permissions', 'Project scope and context', 'Verified outcomes and evidence', 'Approved project visuals'],
+    blocks: [
+      {
+        title: 'A responsible case study',
+        description: 'Every project story should have clear publication permission and enough context to be useful.',
+        items: ['Client approval and attribution preference', 'Challenge, scope and delivered work', 'Approved imagery and supporting detail'],
+      },
+      {
+        title: 'Evidence behind outcomes',
+        description: 'Any stated result must be verifiable, clearly attributed and presented with the right context.',
+        items: ['Evidence for metrics or outcomes', 'Timeframe and relevant assumptions', 'Client review of the final story'],
+      },
+    ],
   },
   team: {
     label: 'Team',
@@ -69,6 +122,18 @@ export const pageContent: Record<string, PageDefinition> = {
       'Team profiles and photographs will be added once names, roles, biographies and consent are confirmed.',
     status: 'Team profiles in preparation',
     needed: ['Approved names and job titles', 'Short biographies', 'Portrait photography and consent', 'Approved social profile links'],
+    blocks: [
+      {
+        title: 'Meet the team',
+        description: 'The directory will introduce real colleagues only after each person approves their profile.',
+        items: ['Name and current role', 'Person-approved biography', 'Portrait and publication consent'],
+      },
+      {
+        title: 'Professional profiles',
+        description: 'External profile links will be included only when verified and approved by the person represented.',
+        items: ['Verified profile URLs', 'Role and expertise confirmation', 'Accessibility text for approved imagery'],
+      },
+    ],
   },
   insights: {
     label: 'Insights',
@@ -81,6 +146,18 @@ export const pageContent: Record<string, PageDefinition> = {
       'Articles will be published when there are approved authors, editorial themes and content ready to help readers.',
     status: 'The first articles are being prepared',
     needed: ['Editorial topics and publishing cadence', 'Approved authors and biographies', 'First articles and review process', 'Social sharing imagery'],
+    blocks: [
+      {
+        title: 'Editorial library',
+        description: 'Articles will appear here after editorial review, with accurate publication details and useful reading content.',
+        items: ['Original reviewed articles', 'Author, date and topic', 'Related reading and sharing image'],
+      },
+      {
+        title: 'Editorial standards',
+        description: 'The publication process should make authorship, accuracy and updates clear to readers.',
+        items: ['Author review and approval', 'Fact-checking and update process', 'Publishing cadence confirmed by the company'],
+      },
+    ],
   },
   careers: {
     label: 'Careers',
@@ -93,6 +170,18 @@ export const pageContent: Record<string, PageDefinition> = {
       'No vacancy or hiring promise is implied. Role details and an application route will appear here after internal approval.',
     status: 'No confirmed vacancies published',
     needed: ['Approved open roles and requirements', 'Employment location and terms', 'Application destination and process', 'Recruitment privacy notice'],
+    blocks: [
+      {
+        title: 'Current opportunities',
+        description: 'No confirmed open roles are listed on this page. A vacancy will appear only when it is approved and active.',
+        items: ['Approved role and responsibilities', 'Requirements and employment terms', 'Closing date or application status'],
+      },
+      {
+        title: 'Application information',
+        description: 'Applicants should be told how their information is handled and where to direct questions.',
+        items: ['Verified application route', 'Recruitment privacy notice', 'Hiring contact and process'],
+      },
+    ],
   },
   contact: {
     label: 'Contact',
@@ -105,6 +194,18 @@ export const pageContent: Record<string, PageDefinition> = {
       'Contact channels and an enquiry form will be enabled once the company confirms its preferred contact details and response process.',
     status: 'Enquiry channel in preparation',
     needed: ['Approved business email and phone', 'Office or mailing address, if public', 'Enquiry form recipient and response expectations', 'Privacy and consent wording'],
+    blocks: [
+      {
+        title: 'Contact channels',
+        description: 'Business contact details are not shown until the company confirms which channels are public and monitored.',
+        items: ['Verified business email or phone', 'Approved public location, if applicable', 'Expected response process'],
+      },
+      {
+        title: 'Enquiry handling',
+        description: 'A form should be enabled only when messages have a confirmed destination and visitors receive clear privacy information.',
+        items: ['Confirmed recipient and routing', 'Consent and privacy wording', 'Accessible success and error feedback'],
+      },
+    ],
   },
   privacy: {
     label: 'Privacy',
@@ -117,6 +218,18 @@ export const pageContent: Record<string, PageDefinition> = {
       'A privacy policy should not be published until data flows, retention, providers, legal basis and contact details have been reviewed.',
     status: 'Privacy notice awaits legal and operational review',
     needed: ['Data collected by site and forms', 'Purposes, legal bases and retention periods', 'Processors, analytics and cookie usage', 'Data-subject rights and privacy contact'],
+    blocks: [
+      {
+        title: 'What a privacy notice must cover',
+        description: 'The notice must describe the website’s real data practices, not a generic or assumed setup.',
+        items: ['Data collected and purposes', 'Retention and service providers', 'Rights, requests and privacy contact'],
+      },
+      {
+        title: 'Review before publication',
+        description: 'The final text needs operational confirmation and appropriate legal review before it is relied upon.',
+        items: ['Actual forms, cookies and analytics', 'Applicable legal bases and jurisdiction', 'Review date and responsible contact'],
+      },
+    ],
   },
   terms: {
     label: 'Terms',
@@ -129,12 +242,24 @@ export const pageContent: Record<string, PageDefinition> = {
       'Website terms are not being fabricated. They require legal review and confirmation of the business, content and jurisdiction details.',
     status: 'Terms await legal review',
     needed: ['Legal entity and jurisdiction confirmation', 'Website use and intellectual property rules', 'Liability, warranties and dispute terms', 'Effective date and legal contact'],
+    blocks: [
+      {
+        title: 'Terms that reflect this website',
+        description: 'The terms should match the company, the website’s content and the services actually offered.',
+        items: ['Verified legal entity and jurisdiction', 'Website use and intellectual property', 'Relevant disclaimers and limitations'],
+      },
+      {
+        title: 'Approval and maintenance',
+        description: 'Terms require review before publication and a process for keeping them current.',
+        items: ['Legal review and approval', 'Effective date and version', 'Dispute process and legal contact'],
+      },
+    ],
   },
 }
 
 export const featuredDestinations = [
-  { title: 'Services', description: 'Understand what the company can help with.', href: '/services', number: '01', tone: 'blue' },
-  { title: 'Products', description: 'Explore confirmed Peculiar products.', href: '/products', number: '02', tone: 'lime' },
-  { title: 'Projects', description: 'See approved work and its context.', href: '/projects', number: '03', tone: 'peach' },
-  { title: 'Insights', description: 'Read practical ideas and perspectives.', href: '/insights', number: '04', tone: 'lavender' },
+  { title: 'Services', description: 'Explore confirmed capabilities and how they help.', href: '/services', number: '01', tone: 'blue', image: '/images/workshop.webp' },
+  { title: 'Products', description: 'Learn about products when details are approved.', href: '/products', number: '02', tone: 'lime', image: '/images/workspace.webp' },
+  { title: 'Projects', description: 'See case studies shared with client approval.', href: '/projects', number: '03', tone: 'peach', image: '/images/team-session.webp' },
+  { title: 'Insights', description: 'Read perspectives and practical ideas.', href: '/insights', number: '04', tone: 'lavender', image: '/images/collaborative-work.webp' },
 ]

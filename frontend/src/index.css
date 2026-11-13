@@ -1,5 +1,5 @@
 :root {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Outfit', sans-serif;
   color: #17233c;
   background: #fbfaf8;
   font-synthesis: none;
@@ -12,13 +12,13 @@
   --ink: #17233c;
   --muted: #647087;
   --navy: #101b32;
-  --blue: #4567f5;
-  --blue-dark: #3453dc;
-  --lime: #d3ef72;
+  --blue: #087c6e;
+  --blue-dark: #07695e;
+  --lime: #48bba6;
   --paper: #fbfaf8;
   --line: #e8e8e5;
-  --heading-font: 'Poppins', sans-serif;
-  --body-font: 'DM Sans', sans-serif;
+  --heading-font: 'Outfit', sans-serif;
+  --body-font: 'Outfit', sans-serif;
 }
 
 * {
