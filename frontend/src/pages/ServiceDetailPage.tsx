@@ -34,7 +34,7 @@ export function ServiceDetailPage() {
           <Reveal className="service-detail-intro">
             <p className="eyebrow">What we offer</p>
             <h2>Capabilities shaped around your needs.</h2>
-            <p>{service.summary}</p>
+            <p>{service.description}</p>
             <Link className="button-primary" to="/contact">Talk to our team <span aria-hidden="true">→</span></Link>
           </Reveal>
           <div className="service-detail-capabilities">

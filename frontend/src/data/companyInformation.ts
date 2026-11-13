@@ -18,6 +18,8 @@ export const companyServices = [
     title: 'Software Development',
     icon: faCode,
     summary: 'We design and build custom software solutions tailored to real-world needs.',
+    description:
+      'From web and mobile applications to enterprise software and SaaS platforms, we develop software around practical needs. Our capabilities also include custom business tools and APIs that connect systems and services.',
     capabilities: [
       'Web applications',
       'Mobile apps for Android and iOS',
@@ -32,6 +34,8 @@ export const companyServices = [
     title: 'Website Design & Development',
     icon: faGlobe,
     summary: 'Modern, responsive and accessible websites that reflect your brand.',
+    description:
+      'We create corporate and startup websites, product and landing pages, e-commerce platforms and CMS-based websites. We also help with redesigns, optimization, security and performance.',
     capabilities: [
       'Corporate and startup websites',
       'Product and landing pages',
@@ -46,6 +50,8 @@ export const companyServices = [
     title: 'UI/UX & Product Design',
     icon: faPenRuler,
     summary: 'We design user experiences and products people love to use.',
+    description:
+      'Our design capabilities span user research and testing, wireframes, prototypes and interface design. We also focus on accessibility-first design, product experience, design systems and branding.',
     capabilities: [
       'User research and testing',
       'Wireframing and prototyping',
@@ -59,6 +65,8 @@ export const companyServices = [
     title: 'IT Consulting & Digital Strategy',
     icon: faCompass,
     summary: 'Helping you make smart technology decisions.',
+    description:
+      'We support technology planning through digital transformation strategy, system architecture and product roadmaps. This service also covers technology audits, automation and process optimization.',
     capabilities: [
       'Digital transformation strategy',
       'System architecture and planning',
@@ -72,6 +80,8 @@ export const companyServices = [
     title: 'Data, Automation & Emerging Technologies',
     icon: faChartLine,
     summary: 'Practical capabilities across data, automation and emerging technology.',
+    description:
+      'We work across data management and analytics, automation solutions and system optimization. Our emerging-technology capabilities include ethical, human-focused AI-assisted tools.',
     capabilities: [
       'Data management and analytics',
       'Automation solutions',
@@ -84,6 +94,8 @@ export const companyServices = [
     title: 'Training & Capacity Building',
     icon: faChalkboardUser,
     summary: 'Building software, design and technology skills for individuals and organizations.',
+    description:
+      'Training covers software development, web development bootcamps, UI/UX design, digital skills and IT fundamentals. Programs can also focus on corporate and organizational technology training.',
     capabilities: [
       'Software development training',
       'Web development bootcamps',

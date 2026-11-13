@@ -2402,6 +2402,10 @@
 @media (prefers-reduced-motion: reduce) {
   .destination-image,
   .principle-card,
+  .services-catalog-card,
+  .services-catalog-card::before,
+  .services-catalog-card::after,
+  .services-catalog-link,
   .service-preview,
   .destination-card-arrow {
     transition: none;
@@ -2659,60 +2663,136 @@
   gap: 16px;
 }
 
+.services-catalog-grid > * {
+  height: 100%;
+}
+
 .services-catalog-card {
+  position: relative;
   display: flex;
+  min-height: 100%;
   min-width: 0;
   flex-direction: column;
-  align-items: flex-start;
+  overflow: hidden;
   padding: 25px;
-  border: 1px solid #dfe4ea;
-  background: white;
+  border: 1px solid #dfe8eb;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 100% 0%, rgb(72 187 166 / 12%), transparent 42%),
+    linear-gradient(135deg, #fff 0%, #f5faf9 65%, #eef8f7 100%);
   transition:
     transform 180ms ease,
     border-color 180ms ease,
     box-shadow 180ms ease;
 }
 
+.services-catalog-card::before {
+  position: absolute;
+  top: -92px;
+  right: -80px;
+  width: 220px;
+  height: 220px;
+  border: 1px solid rgb(8 124 110 / 16%);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 24px rgb(8 124 110 / 3%),
+    0 0 0 50px rgb(8 124 110 / 2%);
+  content: '';
+  pointer-events: none;
+  transition: transform 350ms ease;
+}
+
+.services-catalog-card::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  transform: scaleX(0.35);
+  transform-origin: left;
+  background: linear-gradient(90deg, #69d6bd, #79a8ff);
+  content: '';
+  transition: transform 250ms ease;
+}
+
 .services-catalog-card:hover {
   transform: translateY(-4px);
-  border-color: #b7dcd3;
-  box-shadow: 0 16px 38px rgb(25 39 74 / 7%);
+  border-color: rgb(8 124 110 / 32%);
+  box-shadow: 0 16px 38px rgb(25 39 74 / 9%);
+}
+
+.services-catalog-card:hover::before {
+  transform: scale(1.08);
+}
+
+.services-catalog-card:hover::after {
+  transform: scaleX(1);
+}
+
+.services-catalog-card-top,
+.services-catalog-card-content {
+  position: relative;
+  z-index: 1;
+}
+
+.services-catalog-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.services-catalog-number {
+  color: #63827f;
+  font-family: var(--heading-font);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
 }
 
 .services-catalog-icon {
   display: grid;
-  width: 48px;
-  height: 48px;
+  width: 46px;
+  height: 46px;
   place-items: center;
-  border-radius: 12px;
+  border: 1px solid #cce5e0;
+  border-radius: 50%;
   color: var(--blue-dark);
-  background: #e8f4f1;
+  background: #e5f4f0;
   font-size: 19px;
 }
 
 .services-catalog-card h3 {
-  margin: 19px 0 9px;
+  margin: 0 0 11px;
   color: var(--ink);
   font-family: var(--heading-font);
-  font-size: 20px;
+  font-size: 21px;
   font-weight: 600;
-  letter-spacing: -0.5px;
-  line-height: 1.3;
+  letter-spacing: -0.55px;
+  line-height: 1.28;
 }
 
-.services-catalog-card > p {
+.services-catalog-card-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.services-catalog-card-content > p {
+  max-width: 42ch;
   margin: 0;
-  color: var(--muted);
-  font-size: 14px;
+  color: #5e6b7d;
+  font-size: 13px;
   line-height: 1.7;
 }
 
 .services-catalog-card ul {
   display: grid;
   width: 100%;
-  margin: 18px 0;
+  margin: 20px 0 22px;
   padding: 0;
-  gap: 9px;
+  gap: 10px;
   list-style: none;
 }
 
@@ -2720,18 +2800,19 @@
   position: relative;
   padding-left: 18px;
   color: #46536b;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.55;
 }
 
 .services-catalog-card li::before {
   position: absolute;
-  top: 0.58em;
+  top: 0.62em;
   left: 0;
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
-  background: var(--blue);
+  background: #15917f;
+  box-shadow: 0 0 9px rgb(21 145 127 / 25%);
   content: '';
 }
 
@@ -2741,14 +2822,28 @@
   align-items: center;
   gap: 8px;
   margin-top: auto;
+  padding: 0 14px;
+  border: 1px solid #c7dfda;
+  border-radius: 3px;
   color: var(--blue-dark);
-  font-size: 14px;
-  font-weight: 700;
+  background: rgb(255 255 255 / 70%);
+  font-size: 12px;
+  font-weight: 600;
   text-decoration: none;
+  transition:
+    color 180ms ease,
+    background 180ms ease,
+    border-color 180ms ease;
 }
 
 .services-catalog-link:hover {
-  color: var(--blue);
+  border-color: var(--blue-dark);
+  color: white;
+  background: var(--blue-dark);
+}
+
+.services-catalog-link svg {
+  font-size: 11px;
 }
 
 .services-catalog-action {
@@ -2757,7 +2852,7 @@
 }
 
 .services-catalog--home .services-catalog-card {
-  min-height: 255px;
+  min-height: 286px;
 }
 
 .service-detail-section {

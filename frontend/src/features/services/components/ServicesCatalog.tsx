@@ -1,3 +1,4 @@
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
 import { Reveal } from '../../../components/ui/Reveal'
@@ -29,21 +30,26 @@ export function ServicesCatalog({ home = false }: ServicesCatalogProps) {
           {companyServices.map((service, index) => (
             <Reveal key={service.slug} delay={index * 0.06}>
               <article className="services-catalog-card">
-                <span className="services-catalog-icon" aria-hidden="true">
-                  <FontAwesomeIcon icon={service.icon} />
-                </span>
-                <h3>{service.title}</h3>
-                <p>{service.summary}</p>
-                {!home && (
-                  <ul>
-                    {service.capabilities.map((capability) => (
-                      <li key={capability}>{capability}</li>
-                    ))}
-                  </ul>
-                )}
-                <Link to={`/services/${service.slug}`} className="services-catalog-link">
-                  Explore service <span aria-hidden="true">→</span>
-                </Link>
+                <div className="services-catalog-card-top">
+                  <span className="services-catalog-number">{String(index + 1).padStart(2, '0')}</span>
+                  <span className="services-catalog-icon" aria-hidden="true">
+                    <FontAwesomeIcon icon={service.icon} />
+                  </span>
+                </div>
+                <div className="services-catalog-card-content">
+                  <h3>{service.title}</h3>
+                  <p>{service.description}</p>
+                  {!home && (
+                    <ul>
+                      {service.capabilities.map((capability) => (
+                        <li key={capability}>{capability}</li>
+                      ))}
+                    </ul>
+                  )}
+                  <Link to={`/services/${service.slug}`} className="services-catalog-link">
+                    Explore service <FontAwesomeIcon icon={faArrowUpRightFromSquare} aria-hidden="true" />
+                  </Link>
+                </div>
               </article>
             </Reveal>
           ))}
