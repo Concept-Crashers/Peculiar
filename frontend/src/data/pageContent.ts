@@ -1,3 +1,5 @@
+import { companyContact } from './companyInformation'
+
 export interface PageDefinition {
   label: string
   eyebrow: string
@@ -42,24 +44,24 @@ export const pageContent: Record<string, PageDefinition> = {
   services: {
     label: 'Services',
     eyebrow: 'Services',
-    title: 'Technology services, clearly explained.',
+    title: 'Technology services built for real-world needs.',
     description:
-      'Explore the capabilities Peculiar Technologies Limited offers, with scope and outcomes explained in plain language.',
-    introTitle: 'Specifics make a better first conversation.',
+      'Explore software development, website design, product design, technology strategy, data and training services.',
+    introTitle: 'Technology, design and skills for what comes next.',
     intro:
-      'Service names, descriptions and delivery details will be published here once the company confirms its current offerings.',
-    status: 'Service catalogue in preparation',
-    needed: ['Confirmed service list', 'Scope and deliverables per service', 'Typical engagement process', 'Approved service imagery'],
+      'Peculiar Technologies provides services across software, web, product design, IT consulting, data, automation and technology training.',
+    status: 'Explore our service areas',
+    needed: [],
     blocks: [
       {
-        title: 'Service catalogue',
-        description: 'No service cards are presented as active offerings until the company confirms the list and descriptions.',
-        items: ['Confirmed service names', 'Intended audiences and needs', 'Availability and engagement route'],
+        title: 'Digital products and experiences',
+        description: 'Design and development capabilities for software products and digital experiences.',
+        items: ['Software development', 'Website design and development', 'UI/UX and product design'],
       },
       {
-        title: 'What a service page will explain',
-        description: 'Each published service should help visitors understand what is included and whether it fits their need.',
-        items: ['Scope and deliverables', 'Process and responsibilities', 'Approved examples and FAQs'],
+        title: 'Technology strategy and capability',
+        description: 'Consulting, data, automation and training to support technology decisions and skills.',
+        items: ['IT consulting and digital strategy', 'Data, automation and emerging technologies', 'Training and capacity building'],
       },
     ],
   },
@@ -186,24 +188,24 @@ export const pageContent: Record<string, PageDefinition> = {
   contact: {
     label: 'Contact',
     eyebrow: 'Start a conversation',
-    title: 'Tell us what you are working on.',
+    title: 'Talk to Peculiar Technologies.',
     description:
-      'The right contact details and enquiry route are being prepared so messages reach the right person.',
-    introTitle: 'A good conversation starts with the right route.',
+      'Reach our team in Uganda by email or phone to discuss your technology needs.',
+    introTitle: 'We’re ready to hear from you.',
     intro:
-      'Contact channels and an enquiry form will be enabled once the company confirms its preferred contact details and response process.',
-    status: 'Enquiry channel in preparation',
-    needed: ['Approved business email and phone', 'Office or mailing address, if public', 'Enquiry form recipient and response expectations', 'Privacy and consent wording'],
+      'Contact Peculiar Technologies Limited by email or phone. For a faster response, include a short description of what you need.',
+    status: 'Email and phone',
+    needed: [],
     blocks: [
       {
-        title: 'Contact channels',
-        description: 'Business contact details are not shown until the company confirms which channels are public and monitored.',
-        items: ['Verified business email or phone', 'Approved public location, if applicable', 'Expected response process'],
+        title: 'Email us',
+        description: 'Send your enquiry to our team.',
+        items: [companyContact.email],
       },
       {
-        title: 'Enquiry handling',
-        description: 'A form should be enabled only when messages have a confirmed destination and visitors receive clear privacy information.',
-        items: ['Confirmed recipient and routing', 'Consent and privacy wording', 'Accessible success and error feedback'],
+        title: 'Call us',
+        description: 'Reach us on either of our contact numbers.',
+        items: companyContact.phones,
       },
     ],
   },

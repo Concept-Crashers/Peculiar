@@ -8,34 +8,35 @@ under `src/pages`.
 ## Current increment
 
 The public homepage includes responsive navigation, introductory content,
-service information outline, discovery prompts and a call-to-action. Motion is
+company service information, discovery prompts and a call-to-action. Motion is
 intentionally subtle and respects the operating system's reduced-motion
 preference. The supplied Peculiar logo is used in the shared header and footer.
 Unsplash workplace photography is used as illustrative stock imagery
 and does not depict Peculiar staff, clients, or projects. Public index and
-detail routes are represented by page-specific editorial templates. About,
-services, products, projects, team, insights, careers, contact and legal pages
-have dedicated content outlines and publication-readiness states. Where company
-facts are missing, the pages explain what needs confirmation rather than
-showing invented claims. See the root README for the page-by-page content
+detail routes are represented by page-specific editorial templates. The
+Services catalog and Contact page use company information supplied in the
+services flyer. Other pages retain editorial outlines where company-approved
+facts are not yet available. See the root README for the page-by-page content
 readiness checklist.
 
-Index and detail templates show the information and permissions needed before
-publication. The homepage evidence section describes the standards for future
-case studies, client feedback and outcomes; it does not contain invented
-testimonials or results.
+The service catalog and service detail pages use the service list provided in
+the company's supplied services flyer. The Contact page uses the email address
+and phone numbers provided in that material. The homepage links directly to
+these services and contact channels.
 
 The homepage footer now includes a photographic contact panel, grouped links
 and location context. The value marquee uses two identical viewport-filling
 tracks for a continuous loop, and becomes static when reduced motion is enabled.
 Desktop also has a top utility strip with the approved `Kampala, Uganda` label.
-Social-profile URLs are demo links and must be replaced with the company's
-verified accounts before deployment; that strip is hidden on mobile.
+Unverified social-profile links are omitted from the utility strip; verified
+company accounts can be added when supplied. The utility strip is hidden on
+mobile.
 
-The contact route does not yet submit enquiries because no approved recipient
-or form-processing service is configured. Product/service/project/article
-detail routes are outlines, not published records. The privacy and terms routes
-are explicitly review placeholders, not legal advice or publishable policies.
+Product, project, team, insights and careers pages remain informational
+templates until company-approved content is available. The Contact page links
+to the supplied email and phone numbers; it does not pretend to submit a web
+form. Privacy and terms content still requires operational and legal review
+before publication.
 Admin/CMS screens and backend functionality remain out of scope for this
 frontend increment.
 

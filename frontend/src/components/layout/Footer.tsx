@@ -2,6 +2,7 @@ import { faArrowRight, faArrowUpRightFromSquare } from '@fortawesome/free-solid-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
 import { BrandLogo } from '../ui/BrandLogo'
+import { CompanyContactDetails } from '../ui/CompanyContactDetails'
 import { siteLocation } from '../../data/siteSettings'
 
 const currentYear = new Date().getFullYear()
@@ -51,14 +52,17 @@ export function Footer() {
         <div className="footer-cta-content">
           <p className="eyebrow eyebrow-light">
             <span className="eyebrow-dot" aria-hidden="true" />
-            Contact information
+            Talk to our team
           </p>
-          <h2>We&apos;re preparing a clear way to get in touch.</h2>
-          <p>Approved contact channels and enquiry information will be published here once confirmed.</p>
+          <h2>Have a technology project in mind?</h2>
+          <p>Contact Peculiar Technologies to discuss software, digital experiences, strategy or training.</p>
         </div>
-        <Link className="button-primary button-lime footer-cta-button" to="/contact">
-          View contact page <FontAwesomeIcon icon={faArrowRight} aria-hidden="true" />
-        </Link>
+        <div className="footer-cta-actions">
+          <CompanyContactDetails compact />
+          <Link className="button-primary button-lime footer-cta-button" to="/contact">
+            Contact us <FontAwesomeIcon icon={faArrowRight} aria-hidden="true" />
+          </Link>
+        </div>
       </div>
 
       <div className="container-wide footer-main">
@@ -67,7 +71,7 @@ export function Footer() {
             <BrandLogo />
           </Link>
           <p className="footer-description">
-            Crafting tomorrow&apos;s technology today, from Kampala, Uganda.
+            Crafting tomorrow&apos;s technology today.
           </p>
           <p className="footer-location">
             <span className="footer-location-dot" aria-hidden="true" />

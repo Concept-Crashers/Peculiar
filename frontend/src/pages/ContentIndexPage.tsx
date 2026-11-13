@@ -8,6 +8,8 @@ import { Marquee } from '../components/ui/Marquee'
 import { ContentReadiness } from '../components/ui/ContentReadiness'
 import { PageContentSections } from '../components/ui/PageContentSections'
 import { pageContent } from '../data/pageContent'
+import { ServicesCatalog } from '../features/services/components/ServicesCatalog'
+import { CompanyContactDetails } from '../components/ui/CompanyContactDetails'
 
 const pageImages: Record<string, string> = {
   about: '/images/team-session.webp',
@@ -60,18 +62,39 @@ export function ContentIndexPage() {
               <span className="status-dot" aria-hidden="true" />
               <span>{page.status}</span>
             </div>
-            <p className="content-status-note">
-              We&apos;ll publish this information when it has been confirmed and approved.
-            </p>
+            {section !== 'services' && section !== 'contact' && (
+              <p className="content-status-note">
+                We&apos;ll publish this information when it has been confirmed and approved.
+              </p>
+            )}
           </Reveal>
         </div>
       </section>
-      <PageContentSections label={page.label} blocks={page.blocks} />
-      <ContentReadiness
-        title="What we need before publishing"
-        description="Each part of this page will be completed with approved information, so visitors can rely on what they read."
-        items={page.needed}
-      />
+      {section === 'services' ? (
+        <ServicesCatalog />
+      ) : section === 'contact' ? (
+        <section className="contact-details-section section-pad">
+          <div className="container-wide contact-details-layout">
+            <Reveal className="contact-details-copy">
+              <p className="eyebrow">Contact details</p>
+              <h2>We&apos;d be glad to hear from you.</h2>
+              <p>Get in touch by email or phone and tell us what you&apos;re looking to build or improve.</p>
+            </Reveal>
+            <Reveal className="contact-details-card">
+              <CompanyContactDetails />
+            </Reveal>
+          </div>
+        </section>
+      ) : (
+        <>
+          <PageContentSections label={page.label} blocks={page.blocks} />
+          <ContentReadiness
+            title="What we need before publishing"
+            description="Each part of this page will be completed with approved information, so visitors can rely on what they read."
+            items={page.needed}
+          />
+        </>
+      )}
       <section className="page-next-section">
         <div className="container-wide page-next-inner">
           <Reveal>

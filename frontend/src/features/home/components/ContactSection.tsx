@@ -2,6 +2,7 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
 import { Reveal } from '../../../components/ui/Reveal'
+import { CompanyContactDetails } from '../../../components/ui/CompanyContactDetails'
 
 export function ContactSection() {
   return (
@@ -9,12 +10,12 @@ export function ContactSection() {
       <Reveal className="container-wide">
         <div className="contact-panel">
           <div>
-            <p className="eyebrow eyebrow-light">Contact information</p>
-            <h2 id="contact-title">The right way to reach us is being confirmed.</h2>
+            <p className="eyebrow eyebrow-light">Contact Peculiar</p>
+            <h2 id="contact-title">Let&apos;s talk about what you&apos;re building.</h2>
             <p className="contact-panel-note">
-              Visit the contact page for its current status. We will publish
-              contact channels once they are approved.
+              Reach our team by email or phone to discuss your technology needs.
             </p>
+            <CompanyContactDetails compact />
           </div>
           <Link className="button-primary" to="/contact">
             View contact page <FontAwesomeIcon icon={faArrowRight} aria-hidden="true" />

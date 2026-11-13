@@ -46,21 +46,23 @@ export function Header() {
             <FontAwesomeIcon icon={faLocationDot} aria-hidden="true" />
             {siteLocation}
           </p>
-          <div className="utility-socials">
-            <span>Follow Peculiar</span>
-            {socialProfiles.map((profile) => (
-              <a
-                key={profile.label}
-                href={profile.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`${profile.label} (demo link)`}
-                title={`${profile.label} · demo link`}
-              >
-                <FontAwesomeIcon icon={profile.icon} aria-hidden="true" />
-              </a>
-            ))}
-          </div>
+          {socialProfiles.length > 0 && (
+            <div className="utility-socials">
+              <span>Follow Peculiar</span>
+              {socialProfiles.map((profile) => (
+                <a
+                  key={profile.label}
+                  href={profile.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={profile.label}
+                  title={profile.label}
+                >
+                  <FontAwesomeIcon icon={profile.icon} aria-hidden="true" />
+                </a>
+              ))}
+            </div>
+          )}
         </div>
       </div>
       <nav className="container-wide nav-shell" aria-label="Main navigation">
