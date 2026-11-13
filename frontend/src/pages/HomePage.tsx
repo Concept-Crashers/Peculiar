@@ -17,8 +17,8 @@ export function HomePage() {
       />
       <HeroSection />
       <Marquee
-        items={['People first', 'Built with purpose', 'Made to matter']}
-        label="People first. Built with purpose. Made to matter."
+        items={['Software development', 'Website design', 'UI/UX and product design', 'IT strategy', 'Data and automation', 'Training']}
+        label="Software development, website design, UI/UX and product design, IT strategy, data and automation, training."
         dark
       />
       <AboutSection />

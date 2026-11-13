@@ -38,7 +38,7 @@ export function ServicesCatalog({ home = false }: ServicesCatalogProps) {
                 </div>
                 <div className="services-catalog-card-content">
                   <h3>{service.title}</h3>
-                  <p>{service.description}</p>
+                  <p>{home ? service.summary : service.description}</p>
                   {!home && (
                     <ul>
                       {service.capabilities.map((capability) => (

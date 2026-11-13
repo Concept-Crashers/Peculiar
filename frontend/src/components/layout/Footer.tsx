@@ -2,7 +2,6 @@ import { faArrowRight, faArrowUpRightFromSquare } from '@fortawesome/free-solid-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
 import { BrandLogo } from '../ui/BrandLogo'
-import { CompanyContactDetails } from '../ui/CompanyContactDetails'
 import { siteLocation } from '../../data/siteSettings'
 
 const currentYear = new Date().getFullYear()
@@ -57,12 +56,9 @@ export function Footer() {
           <h2>Have a technology project in mind?</h2>
           <p>Contact Peculiar Technologies to discuss software, digital experiences, strategy or training.</p>
         </div>
-        <div className="footer-cta-actions">
-          <CompanyContactDetails compact />
-          <Link className="button-primary button-lime footer-cta-button" to="/contact">
-            Contact us <FontAwesomeIcon icon={faArrowRight} aria-hidden="true" />
-          </Link>
-        </div>
+        <Link className="button-primary button-lime footer-cta-button" to="/contact">
+          Contact us <FontAwesomeIcon icon={faArrowRight} aria-hidden="true" />
+        </Link>
       </div>
 
       <div className="container-wide footer-main">

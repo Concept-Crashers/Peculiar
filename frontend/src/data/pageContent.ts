@@ -258,10 +258,3 @@ export const pageContent: Record<string, PageDefinition> = {
     ],
   },
 }
-
-export const featuredDestinations = [
-  { title: 'Services', description: 'Explore confirmed capabilities and how they help.', href: '/services', number: '01', tone: 'blue', image: '/images/workshop.webp' },
-  { title: 'Products', description: 'Learn about products when details are approved.', href: '/products', number: '02', tone: 'lime', image: '/images/workspace.webp' },
-  { title: 'Projects', description: 'See case studies shared with client approval.', href: '/projects', number: '03', tone: 'peach', image: '/images/team-session.webp' },
-  { title: 'Insights', description: 'Read perspectives and practical ideas.', href: '/insights', number: '04', tone: 'lavender', image: '/images/collaborative-work.webp' },
-]

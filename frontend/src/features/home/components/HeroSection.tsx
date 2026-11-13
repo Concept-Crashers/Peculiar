@@ -26,16 +26,16 @@ export function HeroSection() {
             <span>today.</span>
           </h1>
           <p className="hero-copy">
-            Peculiar Technologies Limited is based in Kampala, Uganda. Explore
-            our story, the way we think about technology, and the information
-            we are preparing to share.
+            From custom software and digital experiences to technology
+            consulting, data, automation and training, we help turn real-world
+            needs into practical technology.
           </p>
           <div className="hero-actions">
-            <Link className="button-primary" to="/about">
-              Discover Peculiar <FontAwesomeIcon icon={faArrowRight} aria-hidden="true" />
+            <Link className="button-primary" to="/services">
+              Explore our services <FontAwesomeIcon icon={faArrowRight} aria-hidden="true" />
             </Link>
-            <Link className="text-link" to="/services">
-              Services overview <FontAwesomeIcon icon={faArrowRight} aria-hidden="true" />
+            <Link className="text-link" to="/contact">
+              Talk to our team <FontAwesomeIcon icon={faArrowRight} aria-hidden="true" />
             </Link>
           </div>
         </motion.div>

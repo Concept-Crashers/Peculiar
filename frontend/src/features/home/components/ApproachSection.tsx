@@ -27,10 +27,9 @@ export function ApproachSection() {
       <div className="container-wide">
         <Reveal className="section-heading">
           <p className="eyebrow eyebrow-light">Before choosing a solution</p>
-          <h2 id="approach-title">Start with the questions that matter.</h2>
+          <h2 id="approach-title">Start by understanding the real need.</h2>
           <p>
-            These are useful discovery questions, not a claim about a specific
-            Peculiar delivery process.
+            A few clear questions can help define a useful technology direction.
           </p>
         </Reveal>
         <div className="approach-grid">

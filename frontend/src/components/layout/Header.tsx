@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
-import { faArrowRight, faBars, faLocationDot, faXmark } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight, faBars, faLocationDot, faPhone, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link, NavLink } from 'react-router-dom'
 import { BrandLogo } from '../ui/BrandLogo'
 import { siteLocation, socialProfiles } from '../../data/siteSettings'
+import { companyContact } from '../../data/companyInformation'
 
 const links = [
   { label: 'About', href: '/about' },
@@ -46,9 +47,14 @@ export function Header() {
             <FontAwesomeIcon icon={faLocationDot} aria-hidden="true" />
             {siteLocation}
           </p>
-          {socialProfiles.length > 0 && (
-            <div className="utility-socials">
-              <span>Follow Peculiar</span>
+          <div className="utility-right">
+            <a className="utility-phone" href={`tel:${companyContact.phones[0].replaceAll(' ', '')}`}>
+              <FontAwesomeIcon icon={faPhone} aria-hidden="true" />
+              {companyContact.phones[0]}
+            </a>
+            {socialProfiles.length > 0 && (
+              <div className="utility-socials">
+                <span>Follow Peculiar</span>
               {socialProfiles.map((profile) => (
                 <a
                   key={profile.label}
@@ -61,8 +67,9 @@ export function Header() {
                   <FontAwesomeIcon icon={profile.icon} aria-hidden="true" />
                 </a>
               ))}
-            </div>
-          )}
+              </div>
+            )}
+          </div>
         </div>
       </div>
       <nav className="container-wide nav-shell" aria-label="Main navigation">

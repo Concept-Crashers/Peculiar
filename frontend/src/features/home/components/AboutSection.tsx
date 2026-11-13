@@ -7,7 +7,7 @@ export function AboutSection() {
       <div className="container-wide about-grid">
         <Reveal className="section-heading">
           <p className="eyebrow">Peculiar Technologies Limited</p>
-          <h2 id="about-title">A Ugandan technology company, grounded in real needs.</h2>
+          <h2 id="about-title">Technology, design and digital skills from Kampala.</h2>
         </Reveal>
         <Reveal className="about-aside" delay={0.12}>
           <figure className="about-image">
@@ -21,13 +21,14 @@ export function AboutSection() {
             <figcaption>Illustrative workspace photography</figcaption>
           </figure>
           <p>
-            Based in Kampala, Peculiar Technologies Limited is building a
-            clear, useful account of its company, services, products and work.
+            Peculiar Technologies Limited is a Kampala-based technology
+            company offering software development, website design and
+            development, and UI/UX and product design.
           </p>
           <p>
-            We will share company-specific details as they are confirmed, so
-            visitors can distinguish real capabilities and outcomes from
-            illustrative content.
+            Our services also include IT consulting and digital strategy,
+            data and automation, emerging technologies, and training and
+            capacity building.
           </p>
           <Link className="text-link" to="/about">
             Read about Peculiar <span aria-hidden="true">→</span>
